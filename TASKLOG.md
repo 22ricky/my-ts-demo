@@ -1,5 +1,6 @@
 ---
 title: TASK LOG
+toc: fasle
 timeline: true
 ---
 
@@ -7,7 +8,13 @@ timeline: true
 
 `19th`
 
-- [ ] Add License
+- [x] Add License
 
 `20th`
 
+- [x] Custom Webpack Config
+
+`21th`
+
+- [ ] Fix Yarn Start Error
+- [ ] Eject

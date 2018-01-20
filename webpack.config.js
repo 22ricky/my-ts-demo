@@ -1,8 +1,24 @@
+const webpack = require('webpack');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
+const VENDOR = [
+  "react",
+  "react-dom",
+  "react-redux",
+  "redux"
+];
+
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: {
+    bundle: "./src/index.tsx",
+    vendor: VENDOR
+  },
   output: {
-    filename: "bundle.js",
-    path: __dirname + "/dist"
+    path: path.join(__dirname, "dist"),
+    filename: "[name].[chunkhash].js",
   },
 
   // Enable sourcemaps for debugging webpack's output.
@@ -20,9 +36,33 @@ module.exports = {
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
       // All files with a '.css' extension will be handled by 'css-loader'.
-      { test: /\.css$/, loader: "css-loader" },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{
+            loader: 'css-loader',
+            // options: { modules: true }
+          }]
+        })
+      },
     ]
   },
+
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ["vendor", "manifest"],
+      minChunks: Infinity
+    }),
+    new CleanWebpackPlugin(["dist/bundle.*.js", "dist/manifest.*.js"], {
+      verbose: true,
+      dry: false
+    }),
+    new HTMLWebpackPlugin({
+      template: "public/index.html"
+    }),
+    new ExtractTextPlugin("css/[name].[hash:6].css"),
+  ],
 
   // When importing a module whose path matches one of the following, just
   // assume a corresponding global variable exists and use that instead.
