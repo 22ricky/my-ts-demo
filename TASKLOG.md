@@ -14,7 +14,9 @@ timeline: true
 
 - [x] Custom Webpack Config
 
-`21th`
+`21st`
 
-- [ ] Fix Yarn Start Error
+- [x] Fix Yarn Start Error
+
+`22nd`
 - [ ] Eject
