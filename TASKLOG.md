@@ -19,4 +19,8 @@ timeline: true
 - [x] Fix Yarn Start Error
 
 `22nd`
-- [ ] Eject
+- [x] Add Comment Components
+
+`23rd`
+- [x] Add Comment Container
+- [ ] Add Comment StyleSheet

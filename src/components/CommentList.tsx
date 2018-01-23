@@ -11,7 +11,7 @@ interface CommentListProps {
   data: Data[];
 }
 
-class CommentList extends React.Component<CommentListProps, any> {
+class CommentList extends React.Component<CommentListProps, {}> {
   public render() {
     const commentNodes = this.props.data.map(({ id, author, text }) =>
     <Comment key={`${id}`} author={author}>{text}</Comment> );
