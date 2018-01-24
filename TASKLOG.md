@@ -25,5 +25,9 @@ timeline: true
 - [x] Add Comment Container
 
 `24th`
-- [ ] Add Comment StyleSheet
-- [ ] Add Product Container
+- [x] Add Comment StyleSheet
+- [x] Add Product Components
+
+`25th`
+- [ ] Complete Product Container
+- [ ] Add ShoppingCart Component
