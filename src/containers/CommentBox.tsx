@@ -41,10 +41,10 @@ class CommentBox extends React.Component<CommentBoxProps, CommentBoxState> {
 
   public render() {
     return (
-      <div>
+      <div className="wrapper">
         <h1>评论</h1>
-        <CommentList data={this.state.data} />
         <CommentForm onCommentSubmit={this.handleCommentSubmit.bind( this )} />
+        <CommentList data={this.state.data} />
       </div>
     );
   }

@@ -37,22 +37,31 @@ class CommentForm extends React.Component<CommentFormProps, CommentFormState> {
   
   public render() {
     return (
-      <form onSubmit={this.handleSublit.bind( this )} className="commentForm">
-        <input
-          type="text"
-          placeholder="请输入你的名字"
-          value={this.state.author}
-          onChange={this.handleAuthorChange.bind( this )}
-        />
-        <input
-          type="text"
-          className="text"
-          placeholder="请输入要评论的内容"
-          value={this.state.text}
-          onChange={this.handleTextChange.bind( this )}
-        />
-        <input type="submit" value="提交" />
-      </form>
+      <div className="comment-form">
+        <div className="comment-field">
+          <span className="comment-field-name">用户名：</span>
+          <div className="comment-field-input">
+            <input
+              value={this.state.author}
+              onChange={this.handleAuthorChange.bind( this )}
+            />
+          </div>
+        </div>
+        <div className="comment-field">
+          <span className="comment-field-name">评论内容：</span>
+          <div className="comment-field-input">
+            <textarea
+              value={this.state.text}
+              onChange={this.handleTextChange.bind( this )}
+            />
+          </div>
+        </div>
+        <div className="comment-field-button">
+          <button onClick={this.handleSublit.bind( this )}>
+            发布
+          </button>
+        </div>
+      </div>
     );
   }
 }

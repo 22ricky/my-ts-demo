@@ -10,9 +10,11 @@ interface CommentState {
 class Comment extends React.Component<CommentProps, CommentState> {
   public render() {
     return (
-      <div>
-        <h2>{this.props.author}</h2>
-        {this.props.children}
+      <div className="comment">
+         <div className="comment-author">
+          <span>{this.props.author}</span>：
+        </div>
+        <p>{this.props.children}</p>
       </div>
     );
   }
