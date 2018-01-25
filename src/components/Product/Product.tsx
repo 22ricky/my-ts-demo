@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface Product {
+interface PRODUCT {
   category: string;
   price: number;
   stocked: boolean;
@@ -8,7 +8,7 @@ interface Product {
 }
 
 interface ProductProps {
-  product: Product;
+  product: PRODUCT;
 }
 
 interface ProductState {}
