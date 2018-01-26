@@ -22,15 +22,19 @@ class SeacrchBar extends React.Component<SearchBarProps, SearchBarState> {
   
   public render() {
     return (
-      <form>
-        <input
-          value={this.props.filter}
-          placeholder="请输入商品名称"
-          onChange={this.handleFilter.bind( this )}
-          ref={input => { if ( input ) { this.input = input; } }}
-        />
-        <p>
-          <label>
+      <div className="comment-form">
+        <div className="comment-field">
+          <div className="comment-field-input">
+            <input
+              value={this.props.filter}
+              placeholder="请输入商品名称"
+              onChange={this.handleFilter.bind( this )}
+              ref={input => { if ( input ) { this.input = input; } }}
+            />
+          </div>
+        </div>
+        <div className="comment-field">
+          <div>
             <input
               type="checkbox"
               checked={this.props.inStockOnly}
@@ -38,9 +42,9 @@ class SeacrchBar extends React.Component<SearchBarProps, SearchBarState> {
               ref={checkbox => { if ( checkbox ) { this.checkbox = checkbox; } }}
             />
             只显示有货的
-          </label>
-        </p>
-      </form>
+          </div>
+        </div>
+      </div>
     );
   }
 }

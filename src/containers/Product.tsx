@@ -32,7 +32,7 @@ class Product extends React.Component<ProductProps, ProductState> {
   
   public render() {
     return (
-      <div>
+      <div className="wrapper">
         <SearchBar
           filter={this.state.filter}
           inStockOnly={this.state.inStockOnly}

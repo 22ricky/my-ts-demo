@@ -33,15 +33,17 @@ class ProductTable extends React.Component<ProduceTableProps, ProductTableState>
       lastCategory = product.category;
     });
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>名称</th>
-            <th>价格</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
+      <div className="product-table">
+        <table>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>价格</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </table>
+      </div>
     );
   }
 }

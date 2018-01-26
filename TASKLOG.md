@@ -32,5 +32,5 @@ timeline: true
 - [x] Complete Product Container
 
 `26th`
-- [ ] Add Product StyleSheet
+- [x] Add Product StyleSheet
 - [ ] Add ShoppingCart Component
