@@ -1,6 +1,6 @@
 import * as React from 'react';
-import CommentList from '../components/CommentList';
-import CommentForm from '../components/CommentForm';
+import CommentList from '../components/Comment/CommentList';
+import CommentForm from '../components/Comment/CommentForm';
 
 interface Data {
   id: number;
