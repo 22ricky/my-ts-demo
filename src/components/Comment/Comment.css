@@ -131,3 +131,46 @@
 .product-table th, td {
   padding: 8px 15px;
 }
+
+/* 购物车表格样式 */
+.shoppingCart-table table {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  border-collapse: collapse;
+}
+
+.shoppingCart-table thead {
+  background-color: #e3e3e3;
+}
+
+.shoppingCart-table thead th {
+  padding: 8px;
+  width: 16%;
+}
+
+.shoppingCart-table thead th:nth-child(4) {
+  width: 36%;
+}
+
+.shoppingCart-table tbody td {
+  text-align: center;
+}
+
+.shoppingCart-table tfoot td {
+  text-align: right;
+}
+
+.count-form input {
+  display: inline-block;
+}
+
+.count-form input[type="button"]{
+  width: 21px;
+}
+
+.count-form input[type="text"]{
+  width: 64%;
+  max-width: 60px;
+}

@@ -33,4 +33,7 @@ timeline: true
 
 `26th`
 - [x] Add Product Style
-- [x] Add ShoppingCart Component
+- [x] Add ShoppingCart Container
+
+`27th`
+- [x] Beautify ShoppingCart Container

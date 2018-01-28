@@ -49,25 +49,29 @@ class ShoppingCart extends React.Component<ShoppingCartProps, ShoppingCartState>
       );
     });
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>产品id</th>
-            <th>产品名称</th>
-            <th>产品单价</th>
-            <th>产品数量</th>
-            <th>产品总价</th>
-          </tr>
-        </thead>
-        <tbody>
-          {productNodes}
-        </tbody>
-        <Total
-          total={counts.map( productCount => {
-            return products.filter( product => product.id === productCount.pid )[0].price * productCount.count;
-          }).reduce(( sum, c ) => sum + c, 0)}
-        />
-      </table>
+      <div className="wrapper">
+        <div className="shoppingCart-table">
+          <table>
+            <thead>
+              <tr>
+                <th>产品id</th>
+                <th>产品名称</th>
+                <th>产品单价</th>
+                <th>产品数量</th>
+                <th>产品总价</th>
+              </tr>
+            </thead>
+            <tbody>
+              {productNodes}
+            </tbody>
+            <Total
+              total={counts.map( productCount => {
+                return products.filter( product => product.id === productCount.pid )[0].price * productCount.count;
+              }).reduce(( sum, c ) => sum + c, 0)}
+            />
+          </table>
+        </div>
+      </div>
     );
   }
 }

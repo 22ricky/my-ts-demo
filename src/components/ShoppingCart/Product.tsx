@@ -23,9 +23,9 @@ class Product extends React.Component<ProductProps, ProductState> {
       <tr>
         <td>{id}</td>
         <td>{name}</td>
-        <td>{price}￥</td>
+        <td>￥{price}</td>
         <td><Count count={count} onCount={this.props.onCount} /></td>
-        <td>{price * count}￥</td>
+        <td>￥{price * count}</td>
       </tr>
     );
   }
